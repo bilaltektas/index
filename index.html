@@ -51,7 +51,8 @@ button:active{transform:scale(.96)}
 /* MODAL */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-end;justify-content:center;z-index:3000}
 .modal.active{display:flex}
-.modal-box{background:#fff;width:100%;max-width:420px;border-radius:24px 24px 0 0;padding:22px}
+.modal-box{background:#fff;width:100%;max-width:420px;border-radius:24px 24px 0 0;padding:22px;transform:translateY(100%);animation:slideUp .4s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes slideUp{to{transform:translateY(0)}}
 .close{margin-top:14px;font-weight:700;cursor:pointer}
 
 /* BOTTOM BAR */
@@ -157,7 +158,11 @@ let html='<h3>'+type.toUpperCase()+'</h3><ul>';
 data[type].forEach(i=>html+='<li>'+i+'</li>');
 html+='</ul><div class="close" onclick="closeModal()">Kapat</div>';
 document.getElementById('modalBox').innerHTML=html;
-document.getElementById('modal').classList.add('active')}
+const m=document.getElementById('modal');
+m.classList.add('active');
+clearTimeout(window.autoClose);
+window.autoClose=setTimeout(closeModal,5000);
+}
 function closeModal(){document.getElementById('modal').classList.remove('active')}
 </script>
 
