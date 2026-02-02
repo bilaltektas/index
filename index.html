@@ -3,46 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yeşil Rent A Car | Günlük • Haftalık • Aylık Araç Kiralama</title>
-<meta name="description" content="Antalya Yeşil Rent A Car – Günlük, haftalık ve aylık araç kiralama. Bakımlı ve sigortalı araçlar, hızlı teslim, kurumsal çözümler." />
+<title>Yeşil Rent A Car | Günlük – Haftalık – Aylık Araç Kiralama</title>
+<meta name="description" content="Antalya Yeşil Rent A Car – Günlük, haftalık ve aylık araç kiralama. Premium araç filosu, hızlı rezervasyon, %100 mobil uyumlu." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--green:#0abf53;--dark:#0b0f14;--gray:#f4f6f9}
 *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{background:#fff;color:#111;line-height:1.6;overflow-x:hidden;padding-bottom:90px}
+body{background:#fff;color:#111;line-height:1.6;overflow-x:hidden;padding-bottom:92px}
 
 header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px solid #eee}
-nav{max-width:1200px;margin:auto;padding:14px 16px;display:flex;justify-content:center;align-items:center}
-nav img{height:48px;object-fit:contain}
+nav{max-width:1200px;margin:auto;padding:10px 14px;display:flex;align-items:center;gap:10px}
+nav img{height:34px;width:auto}
+nav span{font-weight:800;letter-spacing:.5px;font-size:14px;white-space:nowrap}
 
-/* HERO */
-.hero{background:linear-gradient(140deg,#0abf53,#058f3e);color:#fff;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at top,rgba(255,255,255,.28),transparent 60%)}
-.hero .wrap{max-width:1200px;margin:auto;padding:72px 16px 56px;display:grid;gap:28px;position:relative}
-.hero h1{font-size:30px;line-height:1.15}
+.hero{background:linear-gradient(120deg,#0abf53,#049c42);color:#fff}
+.hero .wrap{max-width:1200px;margin:auto;padding:64px 16px;display:grid;gap:26px}
+.hero h1{font-size:28px;line-height:1.25}
 .hero p{font-size:15px;opacity:.95}
-.hero .box{background:#fff;color:#111;border-radius:22px;padding:22px;box-shadow:0 24px 50px rgba(0,0,0,.28)}
+.hero .box{background:#fff;color:#111;border-radius:22px;padding:22px;box-shadow:0 22px 44px rgba(0,0,0,.25)}
 
-input,select,button{width:100%;padding:14px;border-radius:14px;border:1px solid #ddd;font-size:15px}
-button{background:var(--green);color:#fff;border:none;font-weight:700;transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s}
-button:active{transform:scale(.96)}
-
-.date-field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.date-field label{font-size:13px;font-weight:600;color:#555}
+label{font-size:12px;font-weight:600;margin:6px 0 4px;display:block}
+input,select,button{width:100%;padding:14px;border-radius:14px;border:1px solid #ddd;font-size:15px;margin-bottom:12px}
+button{background:var(--green);color:#fff;border:none;font-weight:700}
+button:active{transform:scale(.97)}
 
 section{padding:56px 16px}
 .wrap{max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:28px}
+.title{text-align:center;margin-bottom:32px}
 .title h2{font-size:26px}
 
 .grid{display:grid;gap:18px}
-@media(min-width:768px){.hero .wrap{grid-template-columns:1.2fr .8fr}.grid{grid-template-columns:repeat(3,1fr)}.hero h1{font-size:36px}}
+@media(min-width:768px){.hero .wrap{grid-template-columns:1.2fr .8fr}.grid{grid-template-columns:repeat(3,1fr)}}
 
-.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.14);transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.card:active{transform:scale(.97)}
-
-.badge{position:absolute;top:14px;left:14px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,.22);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.35)}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.14)}
 
 .swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
 .swipe img{width:100%;flex-shrink:0;scroll-snap-align:start;height:190px;object-fit:cover}
@@ -50,63 +44,55 @@ section{padding:56px 16px}
 
 .card .c{padding:18px}
 .price{font-size:20px;font-weight:800;color:var(--green)}
-.more{margin-top:10px;display:inline-block;font-weight:600;color:var(--green);cursor:pointer}
+.more{margin-top:12px;display:inline-block;font-weight:700;color:var(--green);cursor:pointer}
 
-.features{background:var(--gray)}
-
-/* MODAL */
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:2000}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:5000}
 .modal.active{display:flex}
-.modal-box{background:#fff;border-radius:26px 26px 0 0;width:100%;max-width:420px;padding:24px;animation:sheet .35s cubic-bezier(.22,1,.36,1)}
-@keyframes sheet{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
-.modal ul{padding-left:18px;margin:12px 0}
-.close{font-weight:700;cursor:pointer;margin-top:12px;display:inline-block}
+.modal-box{background:#fff;border-radius:26px 26px 0 0;width:100%;max-width:420px;padding:22px;animation:sheet .35s cubic-bezier(.22,1,.36,1);position:relative}
+.modal-box .close{position:absolute;top:14px;right:18px;font-size:18px;font-weight:800;cursor:pointer}
+@keyframes sheet{from{transform:translateY(50px)}to{transform:translateY(0)}}
 
-/* TRUST */
-.trust{display:grid;gap:16px;text-align:center}
-.trust div{background:#fff;border-radius:20px;padding:20px;box-shadow:0 10px 26px rgba(0,0,0,.1)}
-
-/* BOTTOM BAR */
-.bottombar{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;gap:10px;padding:10px 12px;border-top:1px solid #eee;z-index:3000}
+.bottombar{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;gap:10px;padding:10px 12px;border-top:1px solid #eee;z-index:4000}
 .bottombar a{flex:1;text-align:center;padding:14px;border-radius:14px;font-weight:700;text-decoration:none;color:#fff}
 .bottombar .call{background:#111}
 .bottombar .wa{background:#25d366}
 .bottombar .rez{background:var(--green)}
 
-footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;font-size:13px}
+.trust{display:grid;gap:14px;text-align:center}
+.trust div{background:#fff;border-radius:18px;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.1)}
+
+footer{background:#0b0f14;color:#fff;text-align:center;padding:28px 16px;font-size:13px}
 </style>
 </head>
 <body>
 
 <header>
 <nav>
-<img src="logo.jpeg" alt="Yeşil Rent A Car Logo">
+<img src="logo.jpeg" alt="Yeşil Rent A Car">
+<span>YEŞİL RENT A CAR</span>
 </nav>
 </header>
 
 <section class="hero">
 <div class="wrap">
 <div>
-<h1>Antalya’da Güvenilir Araç Kiralama</h1>
-<p>Günlük, haftalık ve aylık kiralama seçenekleri • Bakımlı & sigortalı araçlar • Hızlı teslim</p>
+<h1>Antalya’da Premium Araç Kiralama</h1>
+<p>Günlük, haftalık ve aylık kiralama seçenekleriyle bakımlı ve sigortalı araçlar.</p>
 </div>
 <div class="box">
 <h3>Hızlı Teklif Al</h3>
-<div class="date-field">
 <label>Başlangıç Tarihi</label>
-<input type="date" id="startDate">
-</div>
-<div class="date-field">
+<input type="date" id="start">
 <label>Bitiş Tarihi</label>
-<input type="date" id="endDate">
-</div>
-<select id="carModel" style="margin-bottom:14px">
+<input type="date" id="end">
+<label>Araç Modeli</label>
+<select id="car">
 <option value="">Araç Seçiniz</option>
-<option>Volkswagen Passat</option>
-<option>Renault Symbol</option>
-<option>Fiat Fiorino</option>
+<option>Passat</option>
+<option>Symbol</option>
+<option>Fiorino</option>
 </select>
-<button onclick="sendWA()">Teklif Al</button>
+<button onclick="callOffer()">Teklif Al</button>
 </div>
 </div>
 </section>
@@ -117,45 +103,28 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;fon
 <div class="grid">
 
 <div class="card">
-<div class="badge">Premium</div>
-<div class="swipe"><img src="PASSAT.jpeg"><img src="PASSAT.jpeg"></div>
-<div class="c">
-<h3>Volkswagen Passat</h3>
-<p>Üst düzey konfor, uzun yol performansı.</p>
-<div class="more" onclick="openModal('passat')">Detayları Gör</div>
-</div></div>
+<div class="swipe"><img src="PASSAT.jpeg"></div>
+<div class="c"><h3>Volkswagen Passat</h3><p>Konforlu ve prestijli sedan.</p><div class="more" onclick="openModal('passat')">Detayları Gör</div></div>
+</div>
 
 <div class="card">
-<div class="badge">Ekonomik</div>
-<div class="swipe"><img src="SYMBOL.jpeg"><img src="SYMBOL.jpeg"></div>
-<div class="c">
-<h3>Renault Symbol</h3>
-<p>Şehir içi için ideal, düşük yakıt.</p>
-<div class="more" onclick="openModal('symbol')">Detayları Gör</div>
-</div></div>
+<div class="swipe"><img src="SYMBOL.jpeg"></div>
+<div class="c"><h3>Renault Symbol</h3><p>Ekonomik ve şehir içi ideal.</p><div class="more" onclick="openModal('symbol')">Detayları Gör</div></div>
+</div>
 
 <div class="card">
-<div class="badge">Kurumsal</div>
-<div class="swipe"><img src="FİORİNO.jpeg"><img src="FİORİNO.jpeg"></div>
-<div class="c">
-<h3>Fiat Fiorino</h3>
-<p>Aylık ve ticari kullanıma uygun.</p>
-<div class="more" onclick="openModal('fiorino')">Detayları Gör</div>
-</div></div>
+<div class="swipe"><img src="FİORİNO.jpeg"></div>
+<div class="c"><h3>Fiat Fiorino</h3><p>Aylık ve ticari kullanım.</p><div class="more" onclick="openModal('fiorino')">Detayları Gör</div></div>
+</div>
 
 </div>
 </div>
 </section>
 
-<section class="features">
-<div class="wrap">
-<div class="title"><h2>Neden Yeşil Rent A Car?</h2></div>
-<div class="trust">
-<div>✔ Tüm araçlar bakımlı ve sigortalı</div>
-<div>✔ Gizli ücret & sürpriz yok</div>
-<div>✔ Hızlı teslim & 7/24 destek</div>
-</div>
-</div>
+<section class="trust">
+<div><strong>✔ Bakımlı & Sigortalı Araçlar</strong></div>
+<div><strong>✔ Gizli Ücret Yok</strong></div>
+<div><strong>✔ 7/24 Destek</strong></div>
 </section>
 
 <footer>© 2026 Yeşil Rent A Car</footer>
@@ -163,32 +132,31 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;fon
 <div class="bottombar">
 <a href="tel:+905074000969" class="call">Ara</a>
 <a href="https://wa.me/905074000969" class="wa">WhatsApp</a>
-<a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="rez">Rezervasyon</a>
+<a href="#" class="rez">Rezervasyon</a>
 </div>
 
-<div class="modal" id="modal"><div class="modal-box" id="modalContent"></div></div>
+<div class="modal" id="modal" onclick="closeModal()">
+<div class="modal-box" onclick="event.stopPropagation()" id="modalContent"></div>
+</div>
 
 <script>
 const data={
-passat:{title:'Volkswagen Passat',list:['Otomatik • Dizel','Geniş iç hacim','Uzun yol konforu']},
-symbol:{title:'Renault Symbol',list:['Ekonomik yakıt','Şehir içi ideal','Kolay park']},
-fiorino:{title:'Fiat Fiorino',list:['Geniş bagaj','Ticari kullanım','Aylık avantajlı']}
+passat:['Otomatik','Dizel','Uzun yol konforu'],
+symbol:['Ekonomik','Şehir içi','Düşük yakıt'],
+fiorino:['Geniş bagaj','Ticari','Aylık avantaj']
 }
-function openModal(type){
-const m=document.getElementById('modal');
-const c=document.getElementById('modalContent');
-let html=`<h3>${data[type].title}</h3><ul>`;
-data[type].list.forEach(i=>html+=`<li>${i}</li>`);
-html+=`</ul><div class='close' onclick='closeModal()'>Kapat</div>`;
-c.innerHTML=html;m.classList.add('active')}
+function openModal(t){
+let h='<div class="close" onclick="closeModal()">×</div><h3>'+t.toUpperCase()+'</h3><ul>'
+data[t].forEach(i=>h+='<li>'+i+'</li>')
+h+='</ul>'
+document.getElementById('modalContent').innerHTML=h
+document.getElementById('modal').classList.add('active')
+}
 function closeModal(){document.getElementById('modal').classList.remove('active')}
-function sendWA(){
-const s=document.getElementById('startDate').value;
-const e=document.getElementById('endDate').value;
-const c=document.getElementById('carModel').value;
-if(!s||!e||!c){alert('Lütfen tarih ve araç seçiniz');return}
-let msg=`Merhaba,%0A🚗 Araç: ${c}%0A📅 Başlangıç: ${s}%0A📅 Bitiş: ${e}%0ATeklif almak istiyorum.`;
-window.location.href=`tel:+905074000969`;
+function callOffer(){
+const s=start.value,e=end.value,c=car.value
+if(!s||!e||!c){alert('Lütfen tarih ve araç seçin');return}
+window.location.href='tel:+905074000969'
 }
 </script>
 
