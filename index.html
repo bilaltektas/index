@@ -1,83 +1,116 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yeşil Rent A Car | Günlük – Haftalık – Aylık Araç Kiralama</title>
-<meta name="description" content="Antalya Yeşil Rent A Car – Günlük, haftalık ve aylık araç kiralama. Premium araç filosu, hızlı rezervasyon, %100 mobil uyumlu." />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Yeşil Rent A Car | Premium Araç Kiralama Antalya</title>
+<meta name="description" content="Antalya Yeşil Rent A Car – Günlük, haftalık, aylık premium araç kiralama. Şeffaf fiyat, WhatsApp ile hızlı teklif, %100 mobil uyum." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-:root{--green:#0abf53;--dark:#0b0f14;--gray:#f4f6f9}
+:root{
+ --green:#0abf53;
+ --green-dark:#059b43;
+ --dark:#0b0f14;
+ --dark-soft:#121826;
+ --gray:#f4f6f9;
+ --radius:20px;
+}
 *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{background:#fff;color:#111;line-height:1.6;overflow-x:hidden}
+body{background:#fff;color:#111;line-height:1.55;overflow-x:hidden}
 
-header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px solid #eee}
-nav{max-width:1200px;margin:auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;color:var(--green);font-size:18px}
-.menu a{margin-left:12px;font-weight:600;font-size:13px;color:#333;text-decoration:none}
+/* HEADER */
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
+nav{max-width:1200px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:15px;color:#0a8f44}
+.logo img{height:34px;width:auto}
+.menu a{margin-left:14px;font-size:13px;font-weight:700;color:#333;text-decoration:none}
 
-/* HERO PARALLAX */
-.hero{background:linear-gradient(120deg,#0abf53,#049c42);color:#fff;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at top,rgba(255,255,255,.25),transparent 60%);transform:translateY(var(--p,0px));transition:.1s}
-.hero .wrap{max-width:1200px;margin:auto;padding:56px 16px;display:grid;gap:24px;position:relative}
-.hero h1{font-size:26px;line-height:1.2}
+/* HERO */
+.hero{position:relative;color:#fff;background:linear-gradient(135deg,#0abf53,#048b3b);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 0%,rgba(255,255,255,.25),transparent 55%)}
+.hero .wrap{max-width:1200px;margin:auto;padding:64px 16px 40px;display:grid;gap:28px;position:relative}
+.hero h1{font-size:30px;line-height:1.15;font-weight:900}
 .hero p{font-size:15px;opacity:.95}
-.hero .box{background:#fff;color:#111;border-radius:20px;padding:20px;box-shadow:0 20px 40px rgba(0,0,0,.22)}
+.hero .trustline{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:600;opacity:.95}
+.hero .trustline span{background:rgba(255,255,255,.18);padding:6px 12px;border-radius:999px}
 
-input,select,button{width:100%;padding:14px;border-radius:14px;border:1px solid #ddd;font-size:15px;margin-bottom:12px}
+.hero .box{background:#fff;color:#111;border-radius:24px;padding:22px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.hero .box h3{margin-bottom:10px;font-size:18px}
+
+/* FORM */
+input,select,button{width:100%;padding:14px;border-radius:16px;border:1px solid #ddd;font-size:15px;margin-bottom:12px}
 input[type=date]{appearance:none}
-button{background:var(--green);color:#fff;border:none;font-weight:700;transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s}
+button{background:var(--green);color:#fff;border:none;font-weight:800;letter-spacing:.3px;transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s}
 button:active{transform:scale(.96)}
 
-section{padding:52px 16px}
+section{padding:56px 16px}
 .wrap{max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:28px}
-.title h2{font-size:24px}
+.title{text-align:center;margin-bottom:30px}
+.title h2{font-size:26px;font-weight:900}
 
 .grid{display:grid;gap:18px}
-@media(min-width:768px){.hero .wrap{grid-template-columns:1.2fr .8fr}.grid{grid-template-columns:repeat(3,1fr)}.hero h1{font-size:32px}}
+@media(min-width:768px){
+ .hero .wrap{grid-template-columns:1.1fr .9fr}
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .hero h1{font-size:38px}
+}
 
-.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+/* CARD */
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.14);transition:transform .35s cubic-bezier(.22,1,.36,1)}
 .card:active{transform:scale(.97)}
 
-/* Glass Badge */
-.badge{position:absolute;top:12px;left:12px;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,.22);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.35)}
-
 .swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
-.swipe img{width:100%;flex-shrink:0;scroll-snap-align:start;height:180px;object-fit:cover;transition:transform .6s}
-.swipe img:active{transform:scale(1.08)}
+.swipe img{width:100%;flex-shrink:0;height:190px;object-fit:cover;scroll-snap-align:start;transition:transform .6s}
 .swipe::-webkit-scrollbar{display:none}
 
+.badge{position:absolute;top:12px;left:12px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:800;color:#fff;background:rgba(255,255,255,.22);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.35)}
+
 .card .c{padding:18px}
-.price{font-size:19px;font-weight:800;color:var(--green)}
-.more{margin-top:10px;display:inline-block;font-weight:600;color:var(--green);cursor:pointer}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p{font-size:14px;opacity:.85}
 
-.features{background:var(--gray)}
+.value-stack{list-style:none;margin:10px 0 6px;padding:0}
+.value-stack li{font-size:13px;margin-bottom:4px}
 
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:flex-end;justify-content:center;z-index:2000}
+.price{font-size:20px;font-weight:900;color:var(--green)}
+.more{margin-top:10px;display:inline-block;font-weight:700;color:var(--green);cursor:pointer}
+
+/* TRUST */
+.trust{display:grid;gap:14px;text-align:center}
+.trust div{background:#fff;border-radius:20px;padding:20px;box-shadow:0 10px 26px rgba(0,0,0,.1)}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:flex-end;justify-content:center;z-index:3000}
 .modal.active{display:flex}
-.modal-box{background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:420px;padding:22px;animation:sheet .35s cubic-bezier(.22,1,.36,1)}
+.modal-box{background:#fff;border-radius:28px 28px 0 0;width:100%;max-width:420px;padding:24px;animation:sheet .35s cubic-bezier(.22,1,.36,1)}
 @keyframes sheet{from{transform:translateY(40px)}to{transform:translateY(0)}}
-.modal h3{margin-bottom:10px}
-.modal ul{padding-left:18px;margin-bottom:14px}
-.modal li{margin-bottom:6px;font-size:14px}
-.close{font-weight:700;cursor:pointer;margin-top:10px;display:inline-block}
 
-/* Bottom Bar */
-.bottombar{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;gap:10px;padding:10px 12px;border-top:1px solid #eee;z-index:3000}
-.bottombar a,.bottombar button{flex:1;text-align:center;padding:14px;border-radius:14px;font-weight:700;text-decoration:none}
+/* BOTTOM BAR */
+.bottombar{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;gap:10px;padding:10px 12px;border-top:1px solid #eee;z-index:4000}
+.bottombar a{flex:1;text-align:center;padding:14px;border-radius:16px;font-weight:800;text-decoration:none}
 .bottombar .call{background:#111;color:#fff}
 .bottombar .wa{background:#25d366;color:#fff}
 
-footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;font-size:13px;margin-bottom:72px}
+footer{background:var(--dark);color:#fff;text-align:center;padding:28px 16px;font-size:13px;margin-bottom:78px}
+
+/* DARK MODE */
+body.dark{background:var(--dark);color:#eee}
+body.dark header{background:rgba(11,15,20,.85);border-color:#1e2430}
+body.dark .card,body.dark .box,body.dark .trust div{background:var(--dark-soft);color:#eee}
+body.dark .price{color:#3ddc84}
+
+.toggle{position:fixed;top:14px;right:14px;background:#111;color:#fff;padding:8px 14px;border-radius:999px;font-size:12px;z-index:5000}
 </style>
 </head>
+
 <body>
+<div class="toggle" onclick="document.body.classList.toggle('dark')">Dark</div>
 
 <header>
 <nav>
-<div class="logo">YEŞİL RENT A CAR</div>
+<div class="logo"><img src="logo.jpeg" alt="Yeşil Rent A Car"> YEŞİL RENT A CAR</div>
 <div class="menu">
 <a href="#cars">Araçlar</a>
 <a href="#services">Hizmetler</a>
@@ -86,23 +119,31 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;fon
 </nav>
 </header>
 
-<section class="hero fade-up">
+<section class="hero">
 <div class="wrap">
 <div>
-<h1>Antalya’da Günlük, Haftalık ve Aylık Araç Kiralama</h1>
-<p>Bakımlı araç filosu, şeffaf fiyatlandırma ve hızlı teslim süreci.</p>
+<h1>Antalya’nın <br>Premium Araç Kiralama Deneyimi</h1>
+<p>Bakımlı araç filosu, net fiyatlar ve WhatsApp üzerinden <strong>anında teklif</strong>.</p>
+<div class="trustline">
+<span>✔ Sigorta Dahil</span><span>✔ Gizli Ücret Yok</span><span>✔ 7/24 Destek</span>
+</div>
 </div>
 <div class="box">
-<h3>Hızlı Rezervasyon</h3>
-<input placeholder="Alış Tarihi">
-<input placeholder="Teslim Tarihi">
-<select><option>Araç Seçiniz</option><option>Passat</option><option>Symbol</option><option>Fiorino</option></select>
-<button onclick="window.open('https://wa.me/905074000969','_blank')">WhatsApp Rezervasyon</button>
+<h3>Hızlı Teklif Al</h3>
+<input type="date" id="start">
+<input type="date" id="end">
+<select id="car">
+<option>Araç Seçiniz</option>
+<option>Volkswagen Passat</option>
+<option>Renault Symbol</option>
+<option>Fiat Fiorino</option>
+</select>
+<button onclick="sendWA()">WhatsApp’tan Teklif Al</button>
 </div>
 </div>
 </section>
 
-<section id="cars" class="fade-up">
+<section id="cars">
 <div class="wrap">
 <div class="title"><h2>Araç Filomuz</h2></div>
 <div class="grid">
@@ -113,9 +154,10 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;fon
 </div>
 <div class="c">
 <h3>Volkswagen Passat</h3>
-<p>Premium sedan, uzun yol ve konfor odaklı.</p>
-<div class="price">2.400 ₺ / Gün</div>
-<div class="more" onclick="openModal('passat')">Detayları Gör</div>
+<p>Üst segment konfor, uzun yol keyfi.</p>
+<ul class="value-stack"><li>✔ Otomatik</li><li>✔ Dizel</li><li>✔ Premium</li></ul>
+<div class="price">Teklif Al</div>
+<div class="more" onclick="openModal('passat')">Detaylar</div>
 </div></div>
 
 <div class="card">
@@ -124,9 +166,10 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;fon
 </div>
 <div class="c">
 <h3>Renault Symbol</h3>
-<p>Ekonomik, şehir içi kullanım için ideal.</p>
-<div class="price">1.200 ₺ / Gün</div>
-<div class="more" onclick="openModal('symbol')">Detayları Gör</div>
+<p>Ekonomik ve şehir içi ideal.</p>
+<ul class="value-stack"><li>✔ Manuel</li><li>✔ Dizel</li><li>✔ Ekonomik</li></ul>
+<div class="price">Teklif Al</div>
+<div class="more" onclick="openModal('symbol')">Detaylar</div>
 </div></div>
 
 <div class="card">
@@ -135,79 +178,70 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:26px 16px;fon
 </div>
 <div class="c">
 <h3>Fiat Fiorino</h3>
-<p>Aylık kiralama ve ticari kullanım için uygun.</p>
-<div class="price">1.100 ₺ / Gün</div>
-<div class="more" onclick="openModal('fiorino')">Detayları Gör</div>
+<p>Aylık & ticari kullanım.</p>
+<ul class="value-stack"><li>✔ Geniş Hacim</li><li>✔ Dizel</li><li>✔ Uzun Dönem</li></ul>
+<div class="price">Teklif Al</div>
+<div class="more" onclick="openModal('fiorino')">Detaylar</div>
 </div></div>
 
 </div>
 </div>
 </section>
 
-<section id="services" class="features fade-up">
-<!-- Aylık Kiralama Kurumsal Modal Trigger -->
-<div style="text-align:center;margin-bottom:24px">
-<button onclick="openMonthly()" style="max-width:320px">Aylık Kiralama & Kurumsal Avantajlar</button>
-</div>
+<section id="services" class="features">
 <div class="wrap">
-<div class="title"><h2>Hizmetlerimiz</h2></div>
+<div class="title"><h2>Hizmetler</h2></div>
 <div class="grid">
-<div class="card"><div class="c"><h3>Günlük Araç Kiralama</h3><p>Kısa süreli ve esnek çözümler.</p></div></div>
-<div class="card"><div class="c"><h3>Haftalık Araç Kiralama</h3><p>Daha avantajlı fiyatlar.</p></div></div>
-<div class="card"><div class="c"><h3>Aylık Araç Kiralama</h3><p>Sabit maliyetli uzun dönem kullanım.</p></div></div>
+<div class="card"><div class="c"><h3>Günlük Kiralama</h3><p>Hızlı teslim, maksimum esneklik.</p></div></div>
+<div class="card"><div class="c"><h3>Haftalık Kiralama</h3><p>Daha avantajlı fiyatlar.</p></div></div>
+<div class="card"><div class="c"><h3>Aylık & Kurumsal</h3><p>Sabit maliyet, özel indirim.</p></div></div>
 </div>
 </div>
 </section>
 
-<section id="contact" class="fade-up">
+<section id="contact">
 <div class="wrap">
-<div class="title"><h2>İletişim & Konum</h2></div>
+<div class="title"><h2>İletişim</h2></div>
 <p><strong>Adres:</strong> Kepez / Antalya</p>
 <p><strong>Telefon & WhatsApp:</strong> 0507 400 09 69</p>
-<div class="map"><iframe src="https://www.google.com/maps?q=Yeşil%20Rent%20A%20Car%20Antalya&output=embed"></iframe></div>
 </div>
+</section>
+
+<section class="trust">
+<div><h3>Bakımlı Araçlar</h3><p>Periyodik kontroller eksiksiz.</p></div>
+<div><h3>Şeffaf Fiyat</h3><p>Sürpriz ücret yok.</p></div>
+<div><h3>Prestijli Hizmet</h3><p>Premium müşteri deneyimi.</p></div>
 </section>
 
 <footer>© 2026 Yeşil Rent A Car</footer>
 
-<div class="fixed" style="left:0;right:0;bottom:0;flex-direction:row;justify-content:space-around;background:#fff;padding:10px 6px;box-shadow:0 -6px 20px rgba(0,0,0,.12)">
-<a href="#cars" style="background:#111">Araçlar</a>
-<a href="https://wa.me/905074000969">WhatsApp</a>
-<a href="#contact" style="background:var(--green)">Rezervasyon</a>
+<div class="bottombar">
+<a href="tel:+905074000969" class="call">Ara</a>
+<a href="https://wa.me/905074000969" class="wa">WhatsApp</a>
 </div>
 
-<!-- Modals -->
-<div class="modal" id="modal">
-<div class="modal-box" id="modalContent"></div>
-</div>
+<div class="modal" id="modal"><div class="modal-box" id="modalContent"></div></div>
 
 <script>
 const data={
-monthly:{title:'Aylık Kiralama & Kurumsal Avantajlar',list:['Sabit aylık fiyat – sürpriz yok','Şirketlere özel faturalandırma','Bakım, vergi, sigorta dahil','Uzun dönem indirimli fiyatlar','Filo & ticari çözümler']},
-passat:{title:'Volkswagen Passat',list:['Otomatik / Dizel','Geniş iç hacim','Uzun yol konforu','Günlük & haftalık uygun']},
-symbol:{title:'Renault Symbol',list:['Manuel / Dizel','Ekonomik yakıt','Şehir içi ideal','Günlük & aylık']},
-fiorino:{title:'Fiat Fiorino',list:['Manuel / Dizel','Geniş bagaj','Ticari kullanım','Aylık kiralama avantajı']}
+passat:{title:'Volkswagen Passat',list:['Otomatik','Dizel','Premium Konfor']},
+symbol:{title:'Renault Symbol',list:['Manuel','Ekonomik','Şehir İçi']},
+fiorino:{title:'Fiat Fiorino',list:['Ticari','Geniş Hacim','Aylık Kiralama']}
 }
-function openModal(type){
+function openModal(t){
 const m=document.getElementById('modal');
 const c=document.getElementById('modalContent');
-let html=`<h3>${data[type].title}</h3><ul>`;
-data[type].list.forEach(i=>html+=`<li>${i}</li>`);
-html+=`</ul><div class='close' onclick='closeModal()'>Kapat</div>`;
-c.innerHTML=html;m.classList.add('active')}
+let h=`<h3>${data[t].title}</h3><ul>`;
+data[t].list.forEach(i=>h+=`<li>${i}</li>`);
+h+=`</ul><div style='margin-top:14px;font-weight:800' onclick='closeModal()'>Kapat</div>`;
+c.innerHTML=h;m.classList.add('active')}
 function closeModal(){document.getElementById('modal').classList.remove('active')}
-function openMonthly(){
-const m=document.getElementById('modal');
-const c=document.getElementById('modalContent');
-let html=`<h3>${data.monthly.title}</h3><ul>`;
-data.monthly.list.forEach(i=>html+=`<li>${i}</li>`);
-html+=`</ul><div class='close' onclick='closeModal()'>Kapat</div>`;
-c.innerHTML=html;m.classList.add('active')}
-// Scroll reveal
-const els=document.querySelectorAll('.fade-up');
-const io=new IntersectionObserver(e=>e.forEach(i=>i.isIntersecting&&i.target.classList.add('show')),{threshold:.15});
-els.forEach(el=>io.observe(el));
+function sendWA(){
+const s=document.getElementById('start').value;
+const e=document.getElementById('end').value;
+const car=document.getElementById('car').value;
+const msg=`Merhaba,%0A${car}%0A📅 ${s} – ${e}%0AAraç kiralama teklifi almak istiyorum.`;
+window.open(`https://wa.me/905074000969?text=${msg}`,'_blank')}
 </script>
-
 </body>
 </html>
