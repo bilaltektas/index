@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeşil Rent A Car | Günlük – Haftalık – Aylık Araç Kiralama</title>
+<meta name="description" content="Antalya Yeşil Rent A Car – Günlük, haftalık ve aylık araç kiralama. Premium araç filosu, hızlı rezervasyon, %100 mobil uyumlu." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0abf53;--dark:#0b0f14;--gray:#f4f6f9}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui}
+body{background:#fff;color:#111;line-height:1.6}
+
+header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px solid #eee}
+nav{max-width:1200px;margin:auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;color:var(--green);font-size:20px}
+.menu a{margin-left:14px;font-weight:600;font-size:14px;color:#333;text-decoration:none}
+
+.hero{background:linear-gradient(120deg,#0abf53,#049c42);color:#fff}
+.hero .wrap{max-width:1200px;margin:auto;padding:64px 16px;display:grid;gap:28px}
+.hero h1{font-size:30px}
+.hero p{font-size:16px;opacity:.95}
+.hero .box{background:#fff;color:#111;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+
+input,select,button{width:100%;padding:14px;border-radius:12px;border:1px solid #ddd;font-size:15px;margin-bottom:12px}
+button{background:var(--green);color:#fff;border:none;font-weight:700}
+
+section{padding:56px 16px}
+.wrap{max-width:1200px;margin:auto}
+.title{text-align:center;margin-bottom:32px}
+.title h2{font-size:26px}
+
+.grid{display:grid;gap:20px}
+@media(min-width:768px){.hero .wrap{grid-template-columns:1.2fr .8fr}.grid{grid-template-columns:repeat(3,1fr)}}
+
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+
+/* Swipe Gallery */
+.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+.swipe img{width:100%;flex-shrink:0;scroll-snap-align:start;height:180px;object-fit:cover}
+.swipe::-webkit-scrollbar{display:none}
+
+.card .c{padding:18px}
+.price{font-size:20px;font-weight:800;color:var(--green)}
+.more{margin-top:10px;display:inline-block;font-weight:600;color:var(--green);cursor:pointer}
+
+.features{background:var(--gray)}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:2000}
+.modal.active{display:flex}
+.modal-box{background:#fff;border-radius:18px;max-width:420px;width:92%;padding:22px;animation:fade .25s ease}
+@keyframes fade{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+.modal h3{margin-bottom:10px}
+.modal ul{padding-left:18px;margin-bottom:14px}
+.modal li{margin-bottom:6px;font-size:14px}
+.close{font-weight:700;cursor:pointer;margin-top:10px;display:inline-block}
+
+.map iframe{width:100%;height:320px;border-radius:18px;border:0}
+footer{background:var(--dark);color:#fff;text-align:center;padding:32px 16px;font-size:14px}
+.fixed{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px}
+.fixed a{background:#25d366;color:#fff;padding:12px 16px;border-radius:50px;font-weight:700}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">YEŞİL RENT A CAR</div>
+<div class="menu">
+<a href="#cars">Araçlar</a>
+<a href="#services">Hizmetler</a>
+<a href="#contact">İletişim</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="wrap">
+<div>
+<h1>Antalya’da Günlük, Haftalık ve Aylık Araç Kiralama</h1>
+<p>Bakımlı araç filosu, şeffaf fiyatlandırma ve hızlı teslim süreci.</p>
+</div>
+<div class="box">
+<h3>Hızlı Rezervasyon</h3>
+<input placeholder="Alış Tarihi">
+<input placeholder="Teslim Tarihi">
+<select><option>Araç Seçiniz</option><option>Passat</option><option>Symbol</option><option>Fiorino</option></select>
+<button onclick="window.open('https://wa.me/905074000969','_blank')">WhatsApp Rezervasyon</button>
+</div>
+</div>
+</section>
+
+<section id="cars">
+<div class="wrap">
+<div class="title"><h2>Araç Filomuz</h2></div>
+<div class="grid">
+
+<div class="card">
+<div class="swipe">
+<img src="PASSAT.jpeg"><img src="PASSAT.jpeg"><img src="PASSAT.jpeg">
+</div>
+<div class="c">
+<h3>Volkswagen Passat</h3>
+<p>Premium sedan, uzun yol ve konfor odaklı.</p>
+<div class="price">2.400 ₺ / Gün</div>
+<div class="more" onclick="openModal('passat')">Detayları Gör</div>
+</div></div>
+
+<div class="card">
+<div class="swipe">
+<img src="SYMBOL.jpeg"><img src="SYMBOL.jpeg"><img src="SYMBOL.jpeg">
+</div>
+<div class="c">
+<h3>Renault Symbol</h3>
+<p>Ekonomik, şehir içi kullanım için ideal.</p>
+<div class="price">1.200 ₺ / Gün</div>
+<div class="more" onclick="openModal('symbol')">Detayları Gör</div>
+</div></div>
+
+<div class="card">
+<div class="swipe">
+<img src="FİORİNO.jpeg"><img src="FİORİNO.jpeg"><img src="FİORİNO.jpeg">
+</div>
+<div class="c">
+<h3>Fiat Fiorino</h3>
+<p>Aylık kiralama ve ticari kullanım için uygun.</p>
+<div class="price">1.100 ₺ / Gün</div>
+<div class="more" onclick="openModal('fiorino')">Detayları Gör</div>
+</div></div>
+
+</div>
+</div>
+</section>
+
+<section id="services" class="features">
+<!-- Aylık Kiralama Kurumsal Modal Trigger -->
+<div style="text-align:center;margin-bottom:24px">
+<button onclick="openMonthly()" style="max-width:320px">Aylık Kiralama & Kurumsal Avantajlar</button>
+</div>
+<div class="wrap">
+<div class="title"><h2>Hizmetlerimiz</h2></div>
+<div class="grid">
+<div class="card"><div class="c"><h3>Günlük Araç Kiralama</h3><p>Kısa süreli ve esnek çözümler.</p></div></div>
+<div class="card"><div class="c"><h3>Haftalık Araç Kiralama</h3><p>Daha avantajlı fiyatlar.</p></div></div>
+<div class="card"><div class="c"><h3>Aylık Araç Kiralama</h3><p>Sabit maliyetli uzun dönem kullanım.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<div class="title"><h2>İletişim & Konum</h2></div>
+<p><strong>Adres:</strong> Kepez / Antalya</p>
+<p><strong>Telefon & WhatsApp:</strong> 0507 400 09 69</p>
+<div class="map"><iframe src="https://www.google.com/maps?q=Yeşil%20Rent%20A%20Car%20Antalya&output=embed"></iframe></div>
+</div>
+</section>
+
+<footer>© 2026 Yeşil Rent A Car</footer>
+
+<div class="fixed" style="left:0;right:0;bottom:0;flex-direction:row;justify-content:space-around;background:#fff;padding:10px 6px;box-shadow:0 -6px 20px rgba(0,0,0,.12)">
+<a href="#cars" style="background:#111">Araçlar</a>
+<a href="https://wa.me/905074000969">WhatsApp</a>
+<a href="#contact" style="background:var(--green)">Rezervasyon</a>
+</div>
+
+<!-- Modals -->
+<div class="modal" id="modal">
+<div class="modal-box" id="modalContent"></div>
+</div>
+
+<script>
+const data={
+monthly:{title:'Aylık Kiralama & Kurumsal Avantajlar',list:['Sabit aylık fiyat – sürpriz yok','Şirketlere özel faturalandırma','Bakım, vergi, sigorta dahil','Uzun dönem indirimli fiyatlar','Filo & ticari çözümler']},
+passat:{title:'Volkswagen Passat',list:['Otomatik / Dizel','Geniş iç hacim','Uzun yol konforu','Günlük & haftalık uygun']},
+symbol:{title:'Renault Symbol',list:['Manuel / Dizel','Ekonomik yakıt','Şehir içi ideal','Günlük & aylık']},
+fiorino:{title:'Fiat Fiorino',list:['Manuel / Dizel','Geniş bagaj','Ticari kullanım','Aylık kiralama avantajı']}
+}
+function openModal(type){
+const m=document.getElementById('modal');
+const c=document.getElementById('modalContent');
+let html=`<h3>${data[type].title}</h3><ul>`;
+data[type].list.forEach(i=>html+=`<li>${i}</li>`);
+html+=`</ul><div class='close' onclick='closeModal()'>Kapat</div>`;
+c.innerHTML=html;m.classList.add('active')}
+function closeModal(){document.getElementById('modal').classList.remove('active')}
+function openMonthly(){
+const m=document.getElementById('modal');
+const c=document.getElementById('modalContent');
+let html=`<h3>${data.monthly.title}</h3><ul>`;
+data.monthly.list.forEach(i=>html+=`<li>${i}</li>`);
+html+=`</ul><div class='close' onclick='closeModal()'>Kapat</div>`;
+c.innerHTML=html;m.classList.add('active')}
+</script>
+
+</body>
+</html>
