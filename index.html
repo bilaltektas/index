@@ -4,66 +4,250 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yeşil Rent A Car | Günlük – Haftalık – Aylık Araç Kiralama</title>
-<meta name="description" content="Antalya Yeşil Rent A Car – Günlük, haftalık ve aylık araç kiralama. Premium araç filosu, hızlı rezervasyon, %100 mobil uyumlu." />
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--green:#0abf53;--dark:#0b0f14;--gray:#f4f6f9}
-*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{background:#fff;color:#111;line-height:1.6;overflow-x:hidden;padding-bottom:92px}
+:root{
+  --green:#0abf53;
+  --dark:#0b0f14;
+  --gray:#f4f6f9;
+}
 
-header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px solid #eee}
-nav{max-width:1200px;margin:auto;padding:10px 14px;display:flex;align-items:center;gap:10px}
-nav img{height:34px;width:auto}
-nav span{font-weight:800;letter-spacing:.5px;font-size:14px;white-space:nowrap}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Inter,system-ui;
+}
 
-.hero{background:linear-gradient(120deg,#0abf53,#049c42);color:#fff}
-.hero .wrap{max-width:1200px;margin:auto;padding:64px 16px;display:grid;gap:26px}
-.hero h1{font-size:28px;line-height:1.25}
-.hero p{font-size:15px;opacity:.95}
-.hero .box{background:#fff;color:#111;border-radius:22px;padding:22px;box-shadow:0 22px 44px rgba(0,0,0,.25)}
+body{
+  background:#fff;
+  color:#111;
+  line-height:1.6;
+  padding-bottom:90px;
+}
 
-label{font-size:12px;font-weight:600;margin:6px 0 4px;display:block}
-input,select,button{width:100%;padding:14px;border-radius:14px;border:1px solid #ddd;font-size:15px;margin-bottom:12px}
-button{background:var(--green);color:#fff;border:none;font-weight:700}
-button:active{transform:scale(.97)}
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:1000;
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  padding:10px 16px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+nav img{
+  height:36px;
+}
+nav span{
+  font-weight:800;
+  letter-spacing:.5px;
+}
 
-section{padding:56px 16px}
-.wrap{max-width:1200px;margin:auto}
-.title{text-align:center;margin-bottom:32px}
-.title h2{font-size:26px}
+/* HERO */
+.hero{
+  background:linear-gradient(120deg,#0abf53,#049c42);
+  color:#fff;
+}
+.hero .wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 16px;
+  display:grid;
+  gap:24px;
+}
+.hero h1{
+  font-size:28px;
+  line-height:1.2;
+}
+.hero p{
+  margin-top:10px;
+  font-size:15px;
+}
+.hero .box{
+  background:#fff;
+  color:#111;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
 
-.grid{display:grid;gap:18px}
-@media(min-width:768px){.hero .wrap{grid-template-columns:1.2fr .8fr}.grid{grid-template-columns:repeat(3,1fr)}}
+/* FORM */
+label{
+  font-size:13px;
+  font-weight:600;
+}
+input,select,button{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #ddd;
+  font-size:15px;
+  margin-bottom:12px;
+}
+button{
+  background:var(--green);
+  color:#fff;
+  border:none;
+  font-weight:700;
+}
 
-.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.14)}
+/* SECTIONS */
+section{
+  padding:50px 16px;
+}
+.wrap{
+  max-width:1200px;
+  margin:auto;
+}
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+.title h2{
+  font-size:24px;
+}
 
-.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
-.swipe img{width:100%;flex-shrink:0;scroll-snap-align:start;height:190px;object-fit:cover}
+/* CAR GRID */
+.grid{
+  display:grid;
+  gap:18px;
+}
+@media(min-width:768px){
+  .hero .wrap{grid-template-columns:1.2fr .8fr}
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+
+/* SWIPE */
+.swipe{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+}
+.swipe img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  flex-shrink:0;
+  scroll-snap-align:start;
+}
 .swipe::-webkit-scrollbar{display:none}
 
-.card .c{padding:18px}
-.price{font-size:20px;font-weight:800;color:var(--green)}
-.more{margin-top:12px;display:inline-block;font-weight:700;color:var(--green);cursor:pointer}
+/* CARD CONTENT */
+.card .c{
+  padding:18px;
+}
+.price{
+  font-size:18px;
+  font-weight:800;
+  color:var(--green);
+}
+.more{
+  margin-top:10px;
+  font-weight:700;
+  color:var(--green);
+  cursor:pointer;
+}
 
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:5000}
+/* FEATURES */
+.features{
+  background:var(--gray);
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;
+  align-items:flex-end;
+  justify-content:center;
+  z-index:3000;
+}
 .modal.active{display:flex}
-.modal-box{background:#fff;border-radius:26px 26px 0 0;width:100%;max-width:420px;padding:22px;animation:sheet .35s cubic-bezier(.22,1,.36,1);position:relative}
-.modal-box .close{position:absolute;top:14px;right:18px;font-size:18px;font-weight:800;cursor:pointer}
-@keyframes sheet{from{transform:translateY(50px)}to{transform:translateY(0)}}
+.modal-box{
+  background:#fff;
+  width:100%;
+  max-width:420px;
+  border-radius:24px 24px 0 0;
+  padding:22px;
+  animation:up .35s ease;
+}
+@keyframes up{
+  from{transform:translateY(100%)}
+  to{transform:translateY(0)}
+}
+.modal-box h3{margin-bottom:10px}
+.modal-box ul{padding-left:18px}
+.modal-box li{margin-bottom:6px;font-size:14px}
+.close{
+  margin-top:14px;
+  font-weight:700;
+  cursor:pointer;
+}
 
-.bottombar{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;gap:10px;padding:10px 12px;border-top:1px solid #eee;z-index:4000}
-.bottombar a{flex:1;text-align:center;padding:14px;border-radius:14px;font-weight:700;text-decoration:none;color:#fff}
-.bottombar .call{background:#111}
-.bottombar .wa{background:#25d366}
-.bottombar .rez{background:var(--green)}
+/* TRUST */
+.trust{
+  display:grid;
+  gap:14px;
+}
+.trust div{
+  background:#fff;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
 
-.trust{display:grid;gap:14px;text-align:center}
-.trust div{background:#fff;border-radius:18px;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.1)}
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:26px 16px;
+  font-size:13px;
+}
 
-footer{background:#0b0f14;color:#fff;text-align:center;padding:28px 16px;font-size:13px}
+/* BOTTOM BAR */
+.bottombar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  display:flex;
+  gap:10px;
+  padding:10px 12px;
+  border-top:1px solid #eee;
+  z-index:4000;
+}
+.bottombar a,.bottombar button{
+  flex:1;
+  text-align:center;
+  padding:14px;
+  border-radius:14px;
+  font-weight:700;
+  text-decoration:none;
+}
+.bottombar .call{background:#111;color:#fff}
+.bottombar .wa{background:#25d366;color:#fff}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -76,23 +260,27 @@ footer{background:#0b0f14;color:#fff;text-align:center;padding:28px 16px;font-si
 <section class="hero">
 <div class="wrap">
 <div>
-<h1>Antalya’da Premium Araç Kiralama</h1>
-<p>Günlük, haftalık ve aylık kiralama seçenekleriyle bakımlı ve sigortalı araçlar.</p>
+<h1>Antalya’nın En Premium Rent A Car Deneyimi</h1>
+<p>Günlük – Haftalık – Aylık Araç Kiralama, VIP & Havalimanı Transfer Hizmeti.</p>
 </div>
+
 <div class="box">
-<h3>Hızlı Teklif Al</h3>
+<h3>Hızlı Rezervasyon</h3>
+
 <label>Başlangıç Tarihi</label>
 <input type="date" id="start">
+
 <label>Bitiş Tarihi</label>
 <input type="date" id="end">
-<label>Araç Modeli</label>
+
 <select id="car">
 <option value="">Araç Seçiniz</option>
-<option>Passat</option>
-<option>Symbol</option>
-<option>Fiorino</option>
+<option>Volkswagen Passat</option>
+<option>Renault Symbol</option>
+<option>Fiat Fiorino</option>
 </select>
-<button onclick="callOffer()">Teklif Al</button>
+
+<button onclick="sendCall()">Teklif Al</button>
 </div>
 </div>
 </section>
@@ -100,63 +288,103 @@ footer{background:#0b0f14;color:#fff;text-align:center;padding:28px 16px;font-si
 <section id="cars">
 <div class="wrap">
 <div class="title"><h2>Araç Filomuz</h2></div>
+
 <div class="grid">
 
 <div class="card">
-<div class="swipe"><img src="PASSAT.jpeg"></div>
-<div class="c"><h3>Volkswagen Passat</h3><p>Konforlu ve prestijli sedan.</p><div class="more" onclick="openModal('passat')">Detayları Gör</div></div>
+<div class="swipe">
+<img src="PASSAT.jpeg"><img src="PASSAT.jpeg">
+</div>
+<div class="c">
+<h3>Volkswagen Passat</h3>
+<p>Premium sedan, uzun yol ve konfor odaklı.</p>
+<div class="price">Premium Segment</div>
+<div class="more" onclick="openModal('passat')">Detayları Gör</div>
+</div>
 </div>
 
 <div class="card">
-<div class="swipe"><img src="SYMBOL.jpeg"></div>
-<div class="c"><h3>Renault Symbol</h3><p>Ekonomik ve şehir içi ideal.</p><div class="more" onclick="openModal('symbol')">Detayları Gör</div></div>
+<div class="swipe">
+<img src="SYMBOL.jpeg"><img src="SYMBOL.jpeg">
+</div>
+<div class="c">
+<h3>Renault Symbol</h3>
+<p>Ekonomik, şehir içi kullanım için ideal.</p>
+<div class="price">Ekonomik Segment</div>
+<div class="more" onclick="openModal('symbol')">Detayları Gör</div>
+</div>
 </div>
 
 <div class="card">
-<div class="swipe"><img src="FİORİNO.jpeg"></div>
-<div class="c"><h3>Fiat Fiorino</h3><p>Aylık ve ticari kullanım.</p><div class="more" onclick="openModal('fiorino')">Detayları Gör</div></div>
+<div class="swipe">
+<img src="FİORİNO.jpeg"><img src="FİORİNO.jpeg">
+</div>
+<div class="c">
+<h3>Fiat Fiorino</h3>
+<p>Aylık kiralama ve ticari kullanım için uygun.</p>
+<div class="price">Ticari Segment</div>
+<div class="more" onclick="openModal('fiorino')">Detayları Gör</div>
+</div>
 </div>
 
+</div>
+</div>
+</section>
+
+<section class="features">
+<div class="wrap">
+<div class="title"><h2>Hizmetlerimiz</h2></div>
+<div class="grid">
+<div class="card"><div class="c"><h3>Günlük Araç Kiralama</h3></div></div>
+<div class="card"><div class="c"><h3>Haftalık Araç Kiralama</h3></div></div>
+<div class="card"><div class="c"><h3>Aylık Araç Kiralama</h3></div></div>
 </div>
 </div>
 </section>
 
 <section class="trust">
-<div><strong>✔ Bakımlı & Sigortalı Araçlar</strong></div>
-<div><strong>✔ Gizli Ücret Yok</strong></div>
-<div><strong>✔ 7/24 Destek</strong></div>
+<div><h3>Bakımlı Araçlar</h3><p>Tüm araçlarımız düzenli bakımlıdır.</p></div>
+<div><h3>Gizli Ücret Yok</h3><p>Sözleşmede ne yazıyorsa onu ödersiniz.</p></div>
+<div><h3>7/24 Destek</h3><p>Her an ulaşabilirsiniz.</p></div>
 </section>
 
 <footer>© 2026 Yeşil Rent A Car</footer>
 
 <div class="bottombar">
-<a href="tel:+905074000969" class="call">Ara</a>
+<a href="tel:05074000969" class="call">Ara</a>
 <a href="https://wa.me/905074000969" class="wa">WhatsApp</a>
-<a href="#" class="rez">Rezervasyon</a>
+<a href="#cars" class="call">Araçlar</a>
 </div>
 
 <div class="modal" id="modal" onclick="closeModal()">
-<div class="modal-box" onclick="event.stopPropagation()" id="modalContent"></div>
+<div class="modal-box" onclick="event.stopPropagation()" id="modalBox"></div>
 </div>
 
 <script>
-const data={
+const info={
 passat:['Otomatik','Dizel','Uzun yol konforu'],
 symbol:['Ekonomik','Şehir içi','Düşük yakıt'],
-fiorino:['Geniş bagaj','Ticari','Aylık avantaj']
+fiorino:['Ticari','Geniş bagaj','Aylık avantaj']
+};
+
+function openModal(type){
+let html='<h3>'+type.toUpperCase()+'</h3><ul>';
+info[type].forEach(i=>html+='<li>'+i+'</li>');
+html+='</ul><div class="close" onclick="closeModal()">Kapat</div>';
+document.getElementById('modalBox').innerHTML=html;
+document.getElementById('modal').classList.add('active');
 }
-function openModal(t){
-let h='<div class="close" onclick="closeModal()">×</div><h3>'+t.toUpperCase()+'</h3><ul>'
-data[t].forEach(i=>h+='<li>'+i+'</li>')
-h+='</ul>'
-document.getElementById('modalContent').innerHTML=h
-document.getElementById('modal').classList.add('active')
+
+function closeModal(){
+document.getElementById('modal').classList.remove('active');
 }
-function closeModal(){document.getElementById('modal').classList.remove('active')}
-function callOffer(){
-const s=start.value,e=end.value,c=car.value
-if(!s||!e||!c){alert('Lütfen tarih ve araç seçin');return}
-window.location.href='tel:+905074000969'
+
+function sendCall(){
+const s=document.getElementById('start').value;
+const e=document.getElementById('end').value;
+const c=document.getElementById('car').value;
+if(!s||!e||!c){alert('Lütfen tarih ve araç seçiniz');return;}
+window.location.href='tel:05074000969';
 }
 </script>
 
